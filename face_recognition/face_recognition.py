@@ -9,12 +9,13 @@ Created on Wed Nov 27 18:10:19 2019
 # %pip install mtcnn
 # %pip install tensorflow
 # %pip install keras
+# %pip install Pillow
 
 #Importando pacotes:
 import os
 from PIL import Image
-from numpy import asarray
-from matplotlib import pyplot
+from numpy import asarray 
+from matplotlib import pyplot 
 from mtcnn.mtcnn import MTCNN
 from numpy import load
 from numpy import expand_dims
