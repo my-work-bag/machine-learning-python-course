@@ -49,20 +49,12 @@ estimators = {'Decision Tree': DecisionTreeClassifier(criterion = 'entropy', ran
 df_results = pd.DataFrame(columns=['clf', 'acc', 'prec', 'rec', 'f1'], index=None)
 
 # Itereando os classificadores
-for name, estim in estimators.items():
-    
-    # print("Treinando Estimador {0}: ".format(name))
-    
-    # Treinando os classificadores com Conjunto de Treinamento
+for name, estim in estimators.items():    
     estim.fit(X_train, y_train)
-    
-    # Prevendo os resultados do modelo criado com o conjunto de testes
     y_pred = estim.predict(X_test)
-    
-    
-    # Armazenando as métricas de cada classificador em um dataframe
     df_results.loc[len(df_results), :] = [name, accuracy_score(y_test, y_pred), precision_score (y_test, y_pred, average = 'macro'),
                    recall_score(y_test, y_pred,  average = 'macro'), f1_score(y_test, y_pred,  average = 'macro')]
+
 
 
 # Exibindo os resultados finais
