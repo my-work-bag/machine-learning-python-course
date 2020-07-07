@@ -47,11 +47,15 @@ for word in words:
     print(word+' --> '+p_stemmer.stem(word))
 
 
-# <font color=green>Note how the stemmer recognizes "runner" as a noun, not a verb form or participle. Also, the adverbs "easily" and "fairly" are stemmed to the unusual root "easili" and "fairli"</font>
+# <font color=green>Note how the stemmer recognizes "runner" as a noun, not a verb form or participle. 
+# Also, the adverbs "easily" and "fairly" are stemmed to the unusual root "easili" and "fairli"</font>
 # ___
 
 # ## Snowball Stemmer
-# This is somewhat of a misnomer, as Snowball is the name of a stemming language developed by Martin Porter. The algorithm used here is more acurately called the "English Stemmer" or "Porter2 Stemmer". It offers a slight improvement over the original Porter stemmer, both in logic and speed. Since **nltk** uses the name SnowballStemmer, we'll use it here.
+# This is somewhat of a misnomer, as Snowball is the name of a stemming language developed by Martin Porter. 
+# The algorithm used here is more acurately called the "English Stemmer" or "Porter2 Stemmer". 
+# It offers a slight improvement over the original Porter stemmer, both in logic and speed. 
+# Since **nltk** uses the name SnowballStemmer, we'll use it here.
 
 
 from nltk.stem.snowball import SnowballStemmer
@@ -70,15 +74,14 @@ for word in words:
     print(word+' --> '+s_stemmer.stem(word))
 
 
-# <font color=green>In this case the stemmer performed the same as the Porter Stemmer, with the exception that it handled the stem of "fairly" more appropriately with "fair"</font>
+# <font color=green>In this case the stemmer performed the same as the Porter Stemmer, 
+# with the exception that it handled the stem of "fairly" more appropriately with "fair"</font>
 # ___
 
 # ## Try it yourself!
 # #### Pass in some of your own words and test each stemmer on them. Remember to pass them as strings!
 
-
 words = ['consolingly']
-
 
 
 print('Porter Stemmer:')
@@ -93,7 +96,9 @@ for word in words:
 
 
 # ___
-# Stemming has its drawbacks. If given the token `saw`, stemming might always return `saw`, whereas lemmatization would likely return either `see` or `saw` depending on whether the use of the token was as a verb or a noun. As an example, consider the following:
+# Stemming has its drawbacks. If given the token `saw`, stemming might always return `saw`, 
+# whereas lemmatization would likely return either `see` or `saw` depending on whether the use of the token was as a verb or a noun. 
+# As an example, consider the following:
 
 
 phrase = 'I am meeting him tomorrow at the meeting'
