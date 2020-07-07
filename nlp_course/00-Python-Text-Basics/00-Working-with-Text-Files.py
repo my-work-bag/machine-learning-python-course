@@ -80,7 +80,7 @@ print(f'{today:%B %d, %Y}')
 # #### This function is specific to jupyter notebooks! Alternatively, quickly create a simple .txt file with Sublime text editor.
 
 
-get_ipython().run_cell_magic('writefile', 'test.txt', 'Hello, this is a quick test file.\nThis is the second line of the file.')
+#get_ipython().run_cell_magic('writefile', 'test.txt', 'Hello, this is a quick test file.\nThis is the second line of the file.')
 
  
 # ## Python Opening a File
@@ -210,7 +210,7 @@ my_file.close()
 # Jupyter notebook users can do the same thing using IPython cell magic:
 
 
-get_ipython().run_cell_magic('writefile', '-a test.txt', '\nThis is more text being appended to test.txt\nAnd another line here.')
+#get_ipython().run_cell_magic('writefile', '-a test.txt', '\nThis is more text being appended to test.txt\nAnd another line here.')
 
  
 # Add a blank space if you want the first line to begin on its own line, as Jupyter won't recognize escape sequences like `\n`
